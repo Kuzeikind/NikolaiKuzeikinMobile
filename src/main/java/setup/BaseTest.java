@@ -23,7 +23,7 @@ public class BaseTest {
         setAppiumDriver(platformName, deviceName, browserName, app);
     }
 
-//    @AfterSuite(alwaysRun = true)
+    @AfterSuite(alwaysRun = true)
     public void tearDown() throws Exception {
         System.out.println("After");
         appiumDriver.closeApp();
