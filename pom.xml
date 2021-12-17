@@ -33,7 +33,7 @@
                     </suiteXmlFiles>
                     <systemPropertyVariables>
 <!--                        <ts.appium>http://localhost:4723/wd/hub</ts.appium>-->
-                        <ts.appium>https://EPM-TSTF:%s@mobilecloud.epam.com/wd/hub</ts.appium>
+                        <ts.appium>https://%s:%s@mobilecloud.epam.com/wd/hub</ts.appium>
                         <email>validemail@gmal.com</email>
                         <username>Jane Doe</username>
                         <password>strongPassword</password>
@@ -98,7 +98,7 @@
                 <activeByDefault>false</activeByDefault>
             </activation>
             <properties>
-                <suite.file>./src/test/resources/CloudAppleNativeTNG.xml</suite.file>
+                <suite.file>./src/test/resources/CloudIosNativeTNG.xml</suite.file>
             </properties>
         </profile>
     </profiles>

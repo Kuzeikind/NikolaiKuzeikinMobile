@@ -19,6 +19,7 @@ public class BaseTest {
     private static AppiumDriver appiumDriver; // singleton
     public AppiumDriver getDriver() { return appiumDriver; }
 
+
     @Parameters({"platformName","appType","deviceName","udid","browserName","app","appPackage","appActivity","bundleId"})
     @BeforeSuite(alwaysRun = true)
     public void setUp(String platformName,
@@ -70,7 +71,8 @@ public class BaseTest {
         try {
             String key = URLEncoder.encode(System.getenv("EPAM_MOBILE_CLOUD_TOKEN"),
                 StandardCharsets.UTF_8.name());
-            URL url = new URL(String.format(System.getProperty("ts.appium"), key));
+            String project_name = System.getenv("EPAM_USER");
+            URL url = new URL(String.format(System.getProperty("ts.appium"), project_name, key));
 
             appiumDriver = new AppiumDriver(url, capabilities);
         } catch (MalformedURLException | UnsupportedEncodingException e) {

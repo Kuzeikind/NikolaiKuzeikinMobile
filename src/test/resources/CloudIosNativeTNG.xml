@@ -1,7 +1,7 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="EPAM mobile cloud native testing Suite">
     <parameter name="appType" value="native"></parameter>
-    <parameter name="udid" value="00008027-001E15221A53802E"></parameter>
+    <parameter name="udid" value="00008101-0000141E3E78001E"></parameter>
     <parameter name="platformName" value="iOS"></parameter>
     <parameter name="bundleId" value="com.epam.EPAMTestApp.ii"></parameter>
     <test name="Cloud iOS native tests">
