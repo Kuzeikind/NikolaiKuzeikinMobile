@@ -8,12 +8,6 @@
     <artifactId>mobileTaTrainingV2</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <properties>
-        <email>validemail@gmal.com</email>
-        <username>Jane Doe</username>
-        <password>strongPassword</password>
-    </properties>
-
     <dependencies>
         <dependency>
             <groupId>io.appium</groupId>
@@ -38,7 +32,8 @@
                         <suiteXmlFile>${suite.file}</suiteXmlFile>
                     </suiteXmlFiles>
                     <systemPropertyVariables>
-                        <ts.appium>http://localhost:4723/wd/hub</ts.appium>
+<!--                        <ts.appium>http://localhost:4723/wd/hub</ts.appium>-->
+                        <ts.appium>https://%s:%s@mobilecloud.epam.com/wd/hub</ts.appium>
                         <email>validemail@gmal.com</email>
                         <username>Jane Doe</username>
                         <password>strongPassword</password>
@@ -70,10 +65,50 @@
         <profile>
             <id>web</id>
             <activation>
-                <activeByDefault>true</activeByDefault>
+                <activeByDefault>false</activeByDefault>
             </activation>
             <properties>
                 <suite.file>./src/test/resources/webTNG.xml</suite.file>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>cloudAndroidWeb</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <suite.file>./src/test/resources/CloudAndroidWebTNG.xml</suite.file>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>cloudIosWeb</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <properties>
+                <suite.file>./src/test/resources/CloudIosWebTNG.xml</suite.file>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>cloudAndroid</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <properties>
+                <suite.file>./src/test/resources/CloudAndroidNativeTNG.xml</suite.file>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>cloudIos</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <properties>
+                <suite.file>./src/test/resources/CloudIosNativeTNG.xml</suite.file>
             </properties>
         </profile>
     </profiles>

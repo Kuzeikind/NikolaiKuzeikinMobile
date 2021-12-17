@@ -1,7 +1,6 @@
 package scenarios;
 
 import static org.testng.Assert.assertNotNull;
-import static org.testng.Assert.assertTrue;
 
 import java.util.Locale;
 import org.testng.annotations.Test;
@@ -12,7 +11,6 @@ import setup.BaseTest;
 public class GoogleSearchPageTest extends BaseTest {
 
     private String searchText = "EPAM";
-    private String resultStatusRegex = "About [\\d,]+ results";
 
     @Test(groups = {"web"}, description = "Verify google search returns relevant results")
     public void testGoogleSearchPage() {
