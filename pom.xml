@@ -73,12 +73,22 @@
         </profile>
 
         <profile>
-            <id>cloudWeb</id>
+            <id>cloudAndroidWeb</id>
             <activation>
                 <activeByDefault>true</activeByDefault>
             </activation>
             <properties>
-                <suite.file>./src/test/resources/CloudWebTNG.xml</suite.file>
+                <suite.file>./src/test/resources/CloudAndroidWebTNG.xml</suite.file>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>cloudIosWeb</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <properties>
+                <suite.file>./src/test/resources/CloudIosWebTNG.xml</suite.file>
             </properties>
         </profile>
 
